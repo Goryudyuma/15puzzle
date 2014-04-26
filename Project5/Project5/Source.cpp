@@ -103,18 +103,6 @@ int nyuuryoku(){
 	return p;
 }
 
-void irekae(int *a, int b){
-	int c=*a;
-	if (b == 'l'){
-		*a = *(a - 1);
-		*(a - 1) = c;
-	}
-	else if (b == 'r'){
-		printf("%d %d\n",*a, *(a + 1));
-		*a = *(a + 1);
-		*(a + 1) = c;
-	}
-}
 
 void hairetsusort(){
 	int i, j;
@@ -126,7 +114,7 @@ void hairetsusort(){
 }
 
 void shori(){
-	int i, j,abc;
+	int i, j;
 	hairetsusort();
 	for (i = 0,j=0; i < MASU*MASU; i++){
 		if (hairetsu[0] / MASU == hairetsu[i] / MASU || hairetsu[0] % MASU == hairetsu[i] % MASU){
